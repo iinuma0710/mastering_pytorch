@@ -1,0 +1,17 @@
+Flask
+jupyter
+matplotlib
+nltk
+numpy
+onnx
+onnx-tf
+Pillow
+pycocotools
+tensorboardX
+tensorflow-gpu
+torch==1.10.0+cu113
+torch-model-archiver 
+torchaudio==0.10.0+cu113
+torchserve
+torchvision==0.11.1+cu113
+tqdm
