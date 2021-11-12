@@ -17,7 +17,6 @@ RUN jupyter notebook --generate-config && \
 
 # 作業ディレクトリの設定
 WORKDIR /workspace
-COPY . /workspace/
 
 # ポートの解放
 EXPOSE 8888

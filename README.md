@@ -40,10 +40,23 @@ Docker で仮想環境を立ち上げる．
 $ docker build -t mastering_pytorch_env ./
 
 # コンテナの起動
-$ docker run -it -p 8888:8888 mastering_pytorch_env /bin/bash
+$ docker run --gpus all -it -p 8888:8888 mastering_pytorch_env /bin/bash
+
+# Docker 内で Jupyter Notebook を起動する．
+$ jupyter notebook --allow-root --ip=0.0.0.0
 ```
 
-Docker 内で Jupyter Notebook を起動する．
+docker-compose で Jupyter Notebook を起動することもできる．
+
 ```bash
-$ jupyter notebook --allow-root --ip=0.0.0.0
+# docker-compose のインストール
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+# docker-compose で Jupyter Notebook を起動
+$ docker-compose up
+
+# 終了
+$ docker-compose down
 ```
