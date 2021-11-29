@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # 必要なパッケージのインストール
 COPY requirements.txt /tmp/
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip openjdk-11-jdk && \
+    apt-get install -y python3 python3-pip openjdk-11-jdk unzip wget && \
     pip3 install -r /tmp/requirements.txt -f https://download.pytorch.org/whl/cu113/torch_stable.html
 
 # Jupyter の設定

@@ -9,6 +9,7 @@ services:
             - 8888:8888
         volumes:
             - ./:/workspace
+            - /mnt/e:/workspace/dataset
         deploy:
             resources:
                 reservations:
